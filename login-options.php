@@ -55,7 +55,10 @@ class AdminerLoginOptions {
     							driverOption.selected = true;
     						}
     					}
-						driverSelect.onchange();
+
+						if(typeof driverSelect.onchange === "function"){
+							driverSelect.onchange();
+						}
     				}
 
 					if(item.dataset.focus !== undefined){
